@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随机语句</title>
+    <script>
+        // 定义多句话
+        const sentences = [
+            "选一款你喜欢的杯子喝饮料",
+            "点一首你喜欢的歌",
+            "选一款你喜欢的餐具就餐",
+            "和你印象最深刻的艺术品合照留念"
+        ];
+
+        // 随机选择一句话并显示在页面上
+        function displayRandomSentence() {
+            const randomIndex = Math.floor(Math.random() * sentences.length);  // 生成随机索引
+            const randomSentence = sentences[randomIndex];  // 获取随机选择的句子
+
+            // 将随机句子显示在页面上
+            document.getElementById("sentenceDisplay").innerText = randomSentence;
+        }
+    </script>
+</head>
+<body onload="displayRandomSentence()">
+    <h1>欢迎来到随机语句展示页面！</h1>
+    <p id="sentenceDisplay">正在加载随机语句...</p>
+</body>
+</html>
